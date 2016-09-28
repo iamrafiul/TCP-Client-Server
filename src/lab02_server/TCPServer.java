@@ -21,7 +21,6 @@ class TCPServer
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
             String line;
-            System.out.println("Given Command: " + command + "\nOutput is:\n");
             String output = " ";
             while( (line = reader.readLine()) != null ) {
                 output += line + "\n";
