@@ -1,4 +1,4 @@
-package TCP-Client-Server;
+package lab02_client;
 
 
 import java.lang.Thread;
@@ -8,6 +8,8 @@ import java.lang.Thread;
  * Contact: iamrafiul@gmail.com
  * Date Created: 9/14/16
  */
+
+
 public class EmptyLoop {
 
 //    private int n;

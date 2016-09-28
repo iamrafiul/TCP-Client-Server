@@ -1,4 +1,4 @@
-package TCP-Client-Server;
+package lab02_client;
 
 /**
  * Author: Rafiul Sabbir

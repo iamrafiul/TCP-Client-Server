@@ -28,11 +28,7 @@ class ThreadHandler extends Thread {
             TCPServer thisServer = new TCPServer();
             String output = thisServer.execute_shell_command(clientData);
 
-            for (String word : output.split("\n")) {
-                System.out.println(word);
-            }
-
-            System.out.println("Received: " + clientData);
+            System.out.println("Received command: " + clientData + " from: " + connectionSocket.getInetAddress().getHostAddress());
 
             for (String word : output.split("\n")) {
                 outToClient.writeBytes(word + "\n");

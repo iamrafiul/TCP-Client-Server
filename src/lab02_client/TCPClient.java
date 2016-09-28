@@ -1,4 +1,4 @@
-package TCP-Client-Server;
+package lab02_client;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -17,7 +17,7 @@ class TCPClient
             String result = "";
             String line;
 
-            Socket clientSocket = new Socket("localhost", 6789);
+            Socket clientSocket = new Socket("52.88.59.21", 6789);
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 

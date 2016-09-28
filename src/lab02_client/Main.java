@@ -8,14 +8,11 @@ package lab02_client;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-//        LoopThread thread = new LoopThread();
 
         CommandLineInterface cmd_gui = new CommandLineInterface();
         cmd_gui.setVisible(true);
 
         EmptyLoop loop = new EmptyLoop();
         loop.itereate_loop();
-
-//        thread.start();
     }
 }

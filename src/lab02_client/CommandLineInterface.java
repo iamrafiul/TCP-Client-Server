@@ -1,4 +1,4 @@
-package TCP-Client-Server;
+package lab02_client;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,6 +11,7 @@ import java.util.concurrent.ExecutionException;
  * Contact: iamrafiul@gmail.com
  * Date Created: 9/14/16
  */
+
 public class CommandLineInterface extends JFrame {
 
     private static final int WIDTH = 500;
@@ -57,23 +58,6 @@ public class CommandLineInterface extends JFrame {
                 final String data = input01.getText();
                 input01.setText("");
 
-//                try {
-//                    TCPClient clientServer = new TCPClient();
-//                    String output = clientServer.getOutputFromServer(data);
-//
-//                    output01.append("Input Command: " + data  + "\n\n");
-//                    output01.append("Completed with status: \n" + output  + "\n***********************************************************************\n");
-//
-//                } catch(Exception e) {
-//                    output01.append("Input Command: " + data  + "\n\n");
-//                    output01.append("Got the error: \n" + e.getStackTrace()  + "\n***********************************************************************\n");
-//                }
-
-
-
-//                output01.setText(data);
-
-
                 SwingWorker<String, Void> worker = new SwingWorker<String, Void>() {
                     @Override
                     protected String doInBackground() throws Exception {
@@ -82,27 +66,10 @@ public class CommandLineInterface extends JFrame {
                             String output = clientServer.getOutputFromServer(data);
 
                             return output;
-//                            output01.append("Input Command: " + data  + "\n\n");
-//                            output01.append("Completed with status: \n" + output  + "\n***********************************************************************\n");
 
                         } catch(Exception e) {
-//                            output01.append("Input Command: " + data  + "\n\n");
-//                            output01.append("Got the error: \n" + e.getStackTrace()  + "\n***********************************************************************\n");
                             return e.getStackTrace().toString();
                         }
-
-                        // Simulate doing something useful.
-//                        TCPClient clientServer = new TCPClient();
-//                        String output = clientServer.getOutputFromServer(data);
-//                        ExecuteShellCommand command_executor = new ExecuteShellCommand();
-//                        String output = command_executor.execute_shell_command(data);
-//
-//                        Thread.sleep(1000);
-
-                        // Here we can return some object of whatever type
-                        // we specified for the first template parameter.
-                        // (in this case we're auto-boxing 'true').
-//                        return output;
                     }
 
                     // Can safely update the GUI from this method.
@@ -125,10 +92,6 @@ public class CommandLineInterface extends JFrame {
                 };
 
                 worker.execute();
-
-
-//                output01.append(output + "\n***********************************************************************\n");
-
             }
         });
     }

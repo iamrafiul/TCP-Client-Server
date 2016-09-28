@@ -28,9 +28,7 @@ class TCPServer
             }
             return output;
 
-        } catch (IOException e) {
-            return e.getMessage();
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             return e.getMessage();
         }
     }
