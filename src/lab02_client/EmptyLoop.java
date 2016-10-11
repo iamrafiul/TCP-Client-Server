@@ -12,10 +12,7 @@ import java.lang.Thread;
 
 public class EmptyLoop {
 
-//    private int n;
-
     public EmptyLoop(){
-//        n = N;
     }
 
     public void itereate_loop() throws InterruptedException {
