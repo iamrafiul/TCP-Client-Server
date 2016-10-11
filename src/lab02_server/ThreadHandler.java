@@ -18,15 +18,6 @@ class ThreadHandler extends Thread {
     Logger log;
     String log_level;
 
-//    ThreadHandler(Socket client) {
-//        this.connectionSocket = client;
-//    }
-
-//    ThreadHandler(Socket client, String level) {
-//        this.connectionSocket = client;
-//        this.level = level;
-//    }
-
     ThreadHandler(Socket client, String log_label) {
         this.connectionSocket = client;
         this.log_level = log_label;

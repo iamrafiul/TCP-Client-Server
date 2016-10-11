@@ -8,7 +8,7 @@ package lab02_client;
 public class LoopThread implements Runnable {
     private Thread t;
 
-    LoopThread(){
+    LoopThread() {
         System.out.println("Thread Started");
     }
 
